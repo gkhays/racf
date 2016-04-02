@@ -20,6 +20,8 @@ public class RACFParser {
 		recordArray.put(parseDataRecord(record, IDENTITY_RECORD_TYPE));
 	}
 	
+	// TODO: Not all these methods need be public.
+	
 	/**
 	 * <pre>
 	 * User basic data record (0200)

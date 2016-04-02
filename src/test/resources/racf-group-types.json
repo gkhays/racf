@@ -1,15 +1,15 @@
 {
-	"racf-group": [
-		{"0100": "Group Basic Data"},
-		{"0101": "Group Subgroups"},
-		{"0102": "Group Members"},
-		{"0103": "Group Installation Data"},
-		{"0110": "Group DFP Data"},
-		{"0120": "Group OMVS Data"},
-		{"0130": "Group OVM Data"},
-		{"0140": "Reserved"},
-		{"0141": "Group TME Data"},
-		{"0150": "Reserved"},
-		{"0151": "Group CSDATA Custom Fields"}
+	"racf-group-types": [
+		{"record-type": "0100", "record-name": "Group Basic Data"},
+		{"record-type": "0101", "record-name": "Group Subgroups"},
+		{"record-type": "0102", "record-name": "Group Members"},
+		{"record-type": "0103", "record-name": "Group Installation Data"},
+		{"record-type": "0110", "record-name": "Group DFP Data"},
+		{"record-type": "0120", "record-name": "Group OMVS Data"},
+		{"record-type": "0130", "record-name": "Group OVM Data"},
+		{"record-type": "0140", "record-name": "Reserved"},
+		{"record-type": "0141", "record-name": "Group TME Data"},
+		{"record-type": "0150", "record-name": "Reserved"},
+		{"record-type": "0151", "record-name": "Group CSDATA Custom Fields"}
 	]
 }

@@ -26,4 +26,4 @@ There are also user types, of which the following table is a sample.
 
 # Other Implementations
 
-[Script to parse a RACF database file as output by the IRRDBU00 command](https://github.com/s1th/racf).
+[Perl script](https://github.com/s1th/racf) to parse a RACF database file as output by the IRRDBU00 command.

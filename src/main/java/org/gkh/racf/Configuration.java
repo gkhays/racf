@@ -61,58 +61,7 @@ public class Configuration {
 	}
 	
 	/**
-	 * In the high school programming class, they are teaching them to use
-	 * Scanner, e.g.
-	 * 
-	 * <pre>
-	 * {
-	 * 	{@code
-	 * 	String content = new Scanner(new File("filename"))
-	 * 			.useDelimiter("\\n")
-	 * 			.next();
-	 * 	System.out.println(content);
-	 * }
-	 * </pre>
-	 * 
-	 * @see <a
-	 *      href="http://stackoverflow.com/questions/3402735/what-is-simplest-way-to-read-a-file-into-string">What
-	 *      is simplest way to read a file into String?</a>
-	 * 
-	 *      This is how I've always done it.
-	 * 
-	 *      <pre>
-	 * {@code
-	 * private String readFile( String file ) throws IOException {
-	 *     BufferedReader reader = new BufferedReader( new FileReader (file));
-	 *     String         line = null;
-	 *     StringBuilder  stringBuilder = new StringBuilder();
-	 *     String         ls = System.getProperty("line.separator");
-	 * 
-	 *     try {
-	 *         while( ( line = reader.readLine() ) != null ) {
-	 *             stringBuilder.append( line );
-	 *             stringBuilder.append( ls );
-	 *         }
-	 * 
-	 *         return stringBuilder.toString();
-	 *     } finally {
-	 *         reader.close();
-	 *     }
-	 * }
-	 * }
-	 * 
-	 * </pre>
-	 * @see <a
-	 *      href="http://stackoverflow.com/questions/326390/how-to-create-a-java-string-from-the-contents-of-a-file">How
-	 *      to create a Java String from the contents of a file?</a>
-	 * 
-	 * @see <a
-	 *      href="http://stackoverflow.com/questions/16027229/reading-from-a-text-file-and-storing-in-a-string">Reading
-	 *      from a text file and storing in a String [duplicate]</a>
-	 * 
-	 * @see <a
-	 *      href="http://www.mkyong.com/java/how-to-read-file-in-java-fileinputstream/">How
-	 *      to read file in Java – FileInputStream</a>
+	 * Reads a file on disk into a single {@link String}.
 	 * 
 	 * @param file
 	 * @return 
