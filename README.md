@@ -23,3 +23,7 @@ There are also user types, of which the following table is a sample.
 | 0203        | User Group Connections  |
 | 0204        | User Installation Data  |
 | 0205        | User Connect Data       |
+
+# Other Implementations
+
+[Script to parse a RACF database file as output by the IRRDBU00 command](https://github.com/s1th/racf).
