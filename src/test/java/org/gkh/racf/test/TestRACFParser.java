@@ -19,6 +19,13 @@ import org.junit.Test;
 
 public class TestRACFParser {
 
+	static final String GROUP_TEST_RECORD = "0100 GRP2     SYS0     2016-04-02 GPID1    NONE     NO";
+
+	private String expectedRecordType = "0100";
+	private String expectedGroupName = "GRP2";
+	private String expectedParentGroup = "SYS0";
+	private String expectedDate = "2016-04-02";
+	
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -62,23 +69,70 @@ public class TestRACFParser {
 		}
 	}
 	
+	/**
+	 * A group data record should parse as follows.
+	 * 
+	 * <pre>
+	 * {
+	 *   "GPBD_RECORD_TYPE": "0100",
+	 *   "GPBD_NAME": "GRP2",
+	 *   "GPBD_SUPGRP_ID": "SYS0",
+	 *   "GPBD_CREATE_DATE": "2016-04-02",
+	 *   "GPBD_OWNER_ID": "GPID1",
+	 *   "GPBD_UACC": "NONE",
+	 *   "GPBD_NOTERMUACC": "",
+	 *   "GPBD_UNIVERSAL": ""
+	 * }
+	 * </pre>
+	 */
 	@Test
 	public void testParseDataRecord() {
 		RACFParser parser = new RACFParser();
 		JSONObject jsonRecord;
 		try {
 			jsonRecord = parser.parseDataRecord(
-					"0100 GRP2     SYS0     2016-04-02 GPID1    NONE     NO",
+					GROUP_TEST_RECORD,
 					RACFParser.GROUP_RECORD_TYPE);
 			System.out.println(jsonRecord.toString(2));
+			assertNotNull(jsonRecord);
+			assertTrue(jsonRecord.has("GPBD_RECORD_TYPE"));
+			assertTrue(jsonRecord.has("GPBD_NAME"));
+			assertTrue(jsonRecord.has("GPBD_SUPGRP_ID"));
+			assertTrue(jsonRecord.has("GPBD_CREATE_DATE"));
 		} catch (JSONException e) {
 			fail(e.getMessage());
 		}
 	}
 
+	/**
+	 * Use (index - 1) when passing in starting position.
+	 * 
+	 * <pre>
+	 * Group basic data record (0100)
+	 * Field Name			Start	End
+	 * GPBD_RECORD_TYPE		1		4
+	 * GPBD_NAME			6		13
+	 * GPBD_SUPGRP_ID		15		22
+	 * GPBD_CREATE_DATE		24		33
+	 * </pre>
+	 */
 	@Test
 	public void testParseRecordWithOffset() {
-		fail("Not yet implemented");
+		RACFParser parser = new RACFParser();
+
+		// TODO: Should the caller really have to trim these?
+		assertEquals(expectedRecordType,
+				parser.parseRecordWithOffset(GROUP_TEST_RECORD, 1 - 1, 4)
+						.trim());
+		assertEquals(expectedGroupName,
+				parser.parseRecordWithOffset(GROUP_TEST_RECORD, 6 - 1, 13)
+						.trim());
+		assertEquals(expectedParentGroup,
+				parser.parseRecordWithOffset(GROUP_TEST_RECORD, 15 - 1, 22)
+						.trim());
+		assertEquals(expectedDate,
+				parser.parseRecordWithOffset(GROUP_TEST_RECORD, 24 - 1, 33)
+						.trim());
 	}
 	
 	@Test
@@ -101,7 +155,6 @@ public class TestRACFParser {
 			// here.
 			for (int i = 0; i < groupTypes.length(); i++) {
 				json = groupTypes.getJSONObject(i);
-				System.out.println(json.toString(2));
 				assertTrue(json.has(recordTypeKey));
 				assertTrue(json.has(recordNameKey));
 				assertThat(json.getString(recordTypeKey),
