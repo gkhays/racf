@@ -93,7 +93,6 @@ public class TestRACFParser {
 			jsonRecord = parser.parseDataRecord(
 					GROUP_TEST_RECORD,
 					RACFParser.GROUP_RECORD_TYPE);
-			System.out.println(jsonRecord.toString(2));
 			assertNotNull(jsonRecord);
 			assertTrue(jsonRecord.has("GPBD_RECORD_TYPE"));
 			assertTrue(jsonRecord.has("GPBD_NAME"));
