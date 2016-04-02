@@ -67,7 +67,8 @@ public class TestRACFParser {
 		RACFParser parser = new RACFParser();
 		JSONObject jsonRecord;
 		try {
-			jsonRecord = parser.parseDataRecord("0100 MYNAME MYID   20160402",
+			jsonRecord = parser.parseDataRecord(
+					"0100 GRP2     SYS0     2016-04-02 GPID1    NONE     NO",
 					RACFParser.GROUP_RECORD_TYPE);
 			System.out.println(jsonRecord.toString(2));
 		} catch (JSONException e) {
