@@ -1,0 +1,15 @@
+{
+	"racf-group": [
+		{"0100": "Group Basic Data"},
+		{"0101": "Group Subgroups"},
+		{"0102": "Group Members"},
+		{"0103": "Group Installation Data"},
+		{"0110": "Group DFP Data"},
+		{"0120": "Group OMVS Data"},
+		{"0130": "Group OVM Data"},
+		{"0140": "Reserved"},
+		{"0141": "Group TME Data"},
+		{"0150": "Reserved"},
+		{"0151": "Group CSDATA Custom Fields"}
+	]
+}

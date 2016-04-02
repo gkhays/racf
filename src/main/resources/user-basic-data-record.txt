@@ -1,0 +1,62 @@
+#User basic data record (0200)
+#
+#The User Basic Data record defines the basic information about
+# a user. There is one record per user.
+#
+#Table 196. User basic data record Defines the basic information about a user.
+#Field Name	Type	Position	Comments
+#Start	End
+USBD_RECORD_TYPE	Int	1	4	Record type of the User Basic Data record (0200).
+USBD_NAME	Char	6	13	User ID as taken from the profile name.
+USBD_CREATE_DATE	Date	15	24	The date that the profile was created.
+USBD_OWNER_ID	Char	26	33	The user ID or group name that owns the profile.
+USBD_ADSP	Yes/ No	35	38	Does the user have the ADSP attribute?
+USBD_SPECIAL	Yes/ No	40	43	Does the user have the SPECIAL attribute?
+USBD_OPER	Yes/ No	45	48	Does the user have the OPERATIONS attribute?
+USBD_REVOKE	Yes/ No	50	53	Is the user REVOKEd?
+USBD_GRPACC	Yes/ No	55	58	Does the user have the GRPACC attribute?
+USBD_PWD_INTERVAL	Int	60	62	The number of days that the user's password can
+ be used.
+USBD_PWD_DATE	Date	64	73	The date that the password was last changed.
+USBD_PROGRAMMER	Char	75	94	The name associated with the user ID.
+USBD_DEFGRP_ID	Char	96	103	The default group associated with the user.
+USBD_LASTJOB_TIME	Time	105	112	The last recorded time that the user entered the
+ system.
+USBD_LASTJOB_DATE	Date	114	123	The last recorded date that the user entered the
+ system.
+USBD_INSTALL_DATA	Char	125	379	Installation-defined data.
+USBD_UAUDIT	Yes/ No	381	384	Do all RACHECK and RACDEF SVCs cause logging?
+USBD_AUDITOR	Yes/ No	386	389	Does this user have the AUDITOR attribute?
+USBD_NOPWD	Char	391	394	"YES" indicates that this user ID can logon without
+ a password using OID card. "NO" indicates that this user must specify
+ a password. "PRO" indicates a protected user ID. "PHR" indicates that
+ the user has a password phrase. See also z/OS Security Server RACF Security Administrator’s Guide.
+USBD_OIDCARD	Yes/ No	396	399	Does this user have OIDCARD data?
+USBD_PWD_GEN	Int	401	403	The current password generation number.
+USBD_REVOKE_CNT	Int	405	407	The number of unsuccessful logon attempts.
+USBD_MODEL	Char	409	452	The data set model profile name.
+USBD_SECLEVEL	Int	454	456	The user's security level.
+USBD_REVOKE_DATE	Date	458	467	The date that the user will be revoked.
+USBD_RESUME_DATE	Date	469	478	The date that the user will be resumed.
+USBD_ACCESS_SUN	Yes/ No	480	483	Can the user access the system on Sunday?
+USBD_ACCESS_MON	Yes/ No	485	488	Can the user access the system on Monday?
+USBD_ACCESS_TUE	Yes/ No	490	493	Can the user access the system on Tuesday?
+USBD_ACCESS_WED	Yes/ No	495	498	Can the user access the system on Wednesday?
+USBD_ACCESS_THU	Yes/ No	500	503	Can the user access the system on Thursday?
+USBD_ACCESS_FRI	Yes/ No	505	508	Can the user access the system on Friday?
+USBD_ACCESS_SAT	Yes/ No	510	513	Can the user access the system on Saturday?
+USBD_START_TIME	Time	515	522	After what time can the user logon?
+USBD_END_TIME	Time	524	531	After what time can the user not logon?
+USBD_SECLABEL	Char	533	540	The user's default security label.
+USBD_ATTRIBS	Char	542	549	Other user attributes (RSTD for users with RESTRICTED
+ attribute).
+USBD_PWDENV_EXISTS	Yes/ No	551	554	Has a PKCS#7 envelope been created for the user's
+ current password?
+USBD_PWD_ASIS	Yes/ No	556	559	Should the password be evaluated in the case
+ entered?
+USBD_PHR_DATE	Date	561	570	The date the password phrase was last changed.
+USBD_PHR_GEN	Int	572	574	The current password phrase generation number.
+USBD_CERT_SEQN	Int	576	585	Sequence number that is incremented whenever
+ a certificate for the user is added, deleted, or altered.
+USBD_PPHENV_EXISTS	Yes/ No	587	590	Has the user's current password phrase been
+ PKCS#7 enveloped for possible retrieval?

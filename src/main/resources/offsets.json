@@ -1,0 +1,308 @@
+{
+"group-basic-data-record": {
+    "record-type": "0100",
+	"ref-url": "https://www-01.ibm.com/support/knowledgecenter/SSLTBW_1.13.0/com.ibm.zos.r13.icha300/gsr.htm%23wq1193",
+    "offsets": [
+      {
+        "field-name": "GPBD_RECORD_TYPE",
+	    "type": "int",
+	    "start": "1",
+	    "end": "4"
+	  },
+	  {
+        "field-name": "GPBD_NAME",
+	    "type": "char",
+	    "start": "6",
+	    "end": "13"
+	  },
+	  {
+        "field-name": "GPBD_SUPGRP_ID",
+	    "type": "char",
+	    "start": "15",
+	    "end": "22"
+	  },
+	  {
+        "field-name": "GPBD_CREATE_DATE",
+	    "type": "date",
+	    "start": "24",
+	    "end": "33"
+	  },
+	  {
+        "field-name": "GPBD_OWNER_ID",
+	    "type": "char",
+	    "start": "35",
+	    "end": "42"
+	  },
+	  {
+        "field-name": "GPBD_UACC",
+	    "type": "char",
+	    "start": "44",
+	    "end": "51"
+	  },
+	  {
+        "field-name": "GPBD_NOTERMUACC",
+	    "type": "yes/no",
+	    "start": "53",
+	    "end": "56"
+	  },
+	  {
+        "field-name": "GPBD_UNIVERSAL",
+	    "type": "yes/no",
+	    "start": "359",
+	    "end": "362"
+	  }
+    ]
+  },
+"user-basic-data-record": {
+    "record-type": "0200",
+	"ref-url": "https://www-01.ibm.com/support/knowledgecenter/SSLTBW_1.13.0/com.ibm.zos.r13.icha300/usr.htm%23wq1264",
+    "offsets": [
+      {
+        "field-name": "USBD_RECORD_TYPE",
+	    "type": "int",
+	    "start": "1",
+	    "end": "4"
+	  },
+	  {
+        "field-name": "USBD_NAME",
+	    "type": "char",
+	    "start": "6",
+	    "end": "13"
+	  },
+	  {
+        "field-name": "USBD_CREATE_DATE",
+	    "type": "date",
+	    "start": "15",
+	    "end": "24"
+	  },
+	  {
+        "field-name": "USBD_OWNER_ID",
+	    "type": "char",
+	    "start": "26",
+	    "end": "33"
+	  },
+	  {
+        "field-name": "USBD_ADSP",
+	    "type": "yes/no",
+	    "start": "35",
+	    "end": "38"
+	  },
+	  {
+        "field-name": "USBD_SPECIAL",
+	    "type": "yes/no",
+	    "start": "40",
+	    "end": "43"
+	  },
+	  {
+        "field-name": "USBD_OPER",
+	    "type": "yes/no",
+	    "start": "45",
+	    "end": "48"
+	  },
+	  {
+        "field-name": "USBD_REVOKE",
+	    "type": "yes/no",
+	    "start": "50",
+	    "end": "53"
+	  },
+	  {
+        "field-name": "USBD_GRPACC",
+	    "type": "yes/no",
+	    "start": "55",
+	    "end": "58"
+	  },
+	  {
+        "field-name": "USBD_PWD_INTERVAL",
+	    "type": "int",
+	    "start": "60",
+	    "end": "62"
+	  },
+	  {
+        "field-name": "USBD_PWD_DATE",
+	    "type": "date",
+	    "start": "64",
+	    "end": "73"
+	  },
+	  {
+        "field-name": "USBD_PROGRAMMER",
+	    "type": "char",
+	    "start": "75",
+	    "end": "94"
+	  },
+	  {
+        "field-name": "USBD_DEFGRP_ID",
+	    "type": "char",
+	    "start": "96",
+	    "end": "103"
+	  },
+	  {
+        "field-name": "USBD_LASTJOB_TIME",
+	    "type": "time",
+	    "start": "105",
+	    "end": "112"
+	  },
+	  {
+        "field-name": "USBD_LASTJOB_DATE",
+	    "type": "date",
+	    "start": "114",
+	    "end": "123"
+	  },
+	  {
+        "field-name": "USBD_AUDITOR",
+	    "type": "yes/no",
+	    "start": "386",
+	    "end": "389"
+	  },
+	  {
+        "field-name": "USBD_NOPWD",
+	    "type": "char",
+	    "start": "391",
+	    "end": "394"
+	  },
+	  {
+        "field-name": "USBD_OIDCARD",
+	    "type": "yes/no",
+	    "start": "396",
+	    "end": "399"
+	  },
+	  {
+        "field-name": "USBD_REVOKE_CNT",
+	    "type": "int",
+	    "start": "405",
+	    "end": "407"
+	  },
+	  {
+        "field-name": "USBD_SECLEVEL",
+	    "type": "int",
+	    "start": "454",
+	    "end": "456"
+	  },
+	  {
+        "field-name": "USBD_REVOKE_DATE",
+	    "type": "date",
+	    "start": "458",
+	    "end": "467"
+	  },
+	  {
+        "field-name": "USBD_RESUME_DATE",
+	    "type": "date",
+	    "start": "469",
+	    "end": "478"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_SUN",
+	    "type": "yes/no",
+	    "start": "480",
+	    "end": "483"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_MON",
+	    "type": "yes/no",
+	    "start": "485",
+	    "end": "488"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_TUE",
+	    "type": "yes/no",
+	    "start": "490",
+	    "end": "493"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_WED",
+	    "type": "yes/no",
+	    "start": "495",
+	    "end": "498"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_THU",
+	    "type": "yes/no",
+	    "start": "500",
+	    "end": "503"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_FRI",
+	    "type": "yes/no",
+	    "start": "505",
+	    "end": "508"
+	  },
+	  {
+        "field-name": "USBD_ACCESS_SAT",
+	    "type": "yes/no",
+	    "start": "510",
+	    "end": "513"
+	  },
+	  {
+        "field-name": "USBD_START_TIME",
+	    "type": "time",
+	    "start": "515",
+	    "end": "522"
+	  },
+	  {
+        "field-name": "USBD_END_TIME",
+	    "type": "time",
+	    "start": "524",
+	    "end": "531"
+	  },
+	  {
+        "field-name": "USBD_SECLABEL",
+	    "type": "char",
+	    "start": "533",
+	    "end": "540"
+	  },
+	  {
+        "field-name": "USBD_PHR_DATE",
+	    "type": "date",
+	    "start": "561",
+	    "end": "570"
+	  }
+    ]
+  },
+"user-connect-data-record": {
+    "record-type": "0205",
+	"ref-url": "https://www-01.ibm.com/support/knowledgecenter/SSLTBW_1.13.0/com.ibm.zos.r13.icha300/usr.htm%23wq1303",
+	"offsets": [
+	  {
+        "field-name": "USCON_RECORD_TYPE",
+	    "type": "int",
+	    "start": "1",
+	    "end": "4"
+	  },
+	  {
+        "field-name": "USCON_NAME",
+	    "type": "char",
+	    "start": "6",
+	    "end": "13"
+	  },
+	  {
+        "field-name": "USCON_GRP_ID",
+	    "type": "char",
+	    "start": "15",
+	    "end": "22"
+	  },
+	  {
+        "field-name": "USCON_CONNECT_DATE",
+	    "type": "date",
+	    "start": "24",
+	    "end": "33"
+	  },
+	  {
+        "field-name": "USCON_OWNER_ID",
+	    "type": "char",
+	    "start": "35",
+	    "end": "42"
+	  },
+	  {
+        "field-name": "USCON_LASTCON_TIME",
+	    "type": "time",
+	    "start": "44",
+	    "end": "51"
+	  },
+	  {
+        "field-name": "USCON_LASTCON_DATE",
+	    "type": "date",
+	    "start": "53",
+	    "end": "62"
+	  }
+	]
+  }
+}
