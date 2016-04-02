@@ -7,6 +7,7 @@ The [RACF database unload utility](https://www.ibm.com/support/knowledgecenter/#
 Each record has a [well defined record type](https://www.ibm.com/support/knowledgecenter/#!/SSLTBW_1.13.0/com.ibm.zos.r13.icha300/ichza3c030.htm%23wq1185). Group types include the following.
 
 ! Record Type | Record Name             |
+|-------------|-------------------------|
 | 0100        | Group Basic Data        |
 | 0101        | Group Subgroups         |
 | 0102        | Group Members           |
@@ -15,6 +16,7 @@ Each record has a [well defined record type](https://www.ibm.com/support/knowled
 There are also user types, of which the following table is a sample.
 
 ! Record Type | Record Name             |
+|-------------|-------------------------|
 | 0200        | User Basic Data         |
 | 0201        | User Categories         |
 | 0202        | User Classes            |
